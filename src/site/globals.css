@@ -145,7 +145,7 @@
   /* Common Utilities: Background */
   .bg-main {
     @apply
-      bg-white dark:bg-black
+      bg-white dark:bg-[#121212]
   }
   .bg-content {
     @apply

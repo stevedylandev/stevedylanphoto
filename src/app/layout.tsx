@@ -1,7 +1,8 @@
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { clsx } from 'clsx/lite';
-import { IBM_Plex_Mono } from 'next/font/google';
+//import { IBM_Plex_Mono } from 'next/font/google';
+import localFont from 'next/font/local'
 import { Metadata } from 'next';
 import { BASE_URL, SITE_DESCRIPTION, SITE_TITLE } from '@/site/config';
 import AppStateProvider from '@/state/AppStateProvider';
@@ -18,11 +19,16 @@ import { ThemeProvider } from 'next-themes';
 import '../site/globals.css';
 import '../site/sonner.css';
 
-const ibmPlexMono = IBM_Plex_Mono({
+/* const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
   variable: '--font-ibm-plex-mono',
-});
+}); */
+
+const ibmPlexMono = localFont({
+  src: 'CommitMono.otf',
+  variable: '--font-ibm-plex-mono'
+  })
 
 export const metadata: Metadata = {
   title: SITE_TITLE,

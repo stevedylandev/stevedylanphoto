@@ -66,7 +66,7 @@ export default function NavClient({
                 />
               </div>
               <div className="hidden xs:block text-right text-balance">
-                {renderLink(SITE_DOMAIN_OR_TITLE, PATH_ROOT)}
+                {renderLink("stevedylan.dev", "https://stevedylan.dev")}
               </div>
             </div>]
             : []}
